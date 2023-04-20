@@ -1,16 +1,18 @@
 # import randon for the computer player side
 import random
-
-
-# when you fill the name and output display on screen
-def print_message(name):
-    print(f"\nHello {name}\nWelcome to Tic Tac Toe")
+import os
 
 
 # for the head dispaly
 print("\t--------------------------------")
 print("\t         Tic Tac Toe       ")
 print("\t--------------------------------")
+
+
+# when you fill the name and output display on screen
+def print_message(username):
+    print(f"\nHello {username}\nWelcome to Tic Tac Toe")
+
 
 # for the username to fill the box
 username = input("What's your name?\n")
@@ -58,7 +60,7 @@ gameRunning = True
 
 
 def PlayerInput(board):
-    inp = int(input("choose the number between 1 and 9"))
+    inp = int(input("choose the number between 1 and 9: "))
     if inp >= 1 and inp <= 9 and board[inp - 1]:
         board[inp - 1] = currentPlayer
     else:
@@ -134,11 +136,15 @@ def computer(board):
             turnPlayer()
 
 
+def clear_console():
+    os.system("cls" if os.name == "nt" else "clear")
+
+
 while gameRunning:
     displayboard(board)
     PlayerInput(board)
-    check_Draw(board)
-    whoWinner()
     turnPlayer()
     computer(board)
     check_Draw(board)
+    whoWinner()
+    clear_console()
