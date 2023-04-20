@@ -1,4 +1,3 @@
-gitblinker==1.4
 cryptography==3.4.8
 dbus-python==1.2.18
 distro==1.7.0
