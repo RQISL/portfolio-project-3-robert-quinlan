@@ -61,6 +61,7 @@ gameRunning = True
 
 def PlayerInput(board):
     inp = int(input("choose the number between 1 and 9: "))
+    os.system("cls" if os.name == "nt" else "clear")
     if inp >= 1 and inp <= 9 and board[inp - 1]:
         board[inp - 1] = currentPlayer
     else:
@@ -118,7 +119,7 @@ def whoWinner():
         or Across_lines_Winner(board)
     ):
         print(f"The winner is {winner}.")
-
+    
 
 def turnPlayer():
     global currentPlayer
@@ -136,8 +137,8 @@ def computer(board):
             turnPlayer()
 
 
-def clear_console():
-    os.system("cls" if os.name == "nt" else "clear")
+# def clear_console():
+#     os.system("cls" if os.name == "nt" else "clear")
 
 
 while gameRunning:
@@ -147,4 +148,4 @@ while gameRunning:
     computer(board)
     check_Draw(board)
     whoWinner()
-    clear_console()
+    # clear_console()
