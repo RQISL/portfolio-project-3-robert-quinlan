@@ -60,15 +60,6 @@ winner = None
 gamerunning = True
 
 
-def player_input(board):
-    inp = int(input("choose the number between 1 and 9: "))
-    os.system("cls" if os.name == "nt" else "clear")
-    if board[inp-1] == "*":
-        board[inp - 1] = currentplayer
-    else:
-        print("oh the player have already spot!")
-
-
 def horizon_lines_winner(board):
     global winner
     if board[0] == board[1] == board[2] and board[0] != "*":
@@ -103,26 +94,6 @@ def across_lines_winner(board):
     elif board[2] == board[4] == board[6] and board[2] != "*":
         winner = board[2]
         return True
-
-
-def check_draw(board):
-    global gamerunning
-    if "*" not in board:
-        display_board(board)
-        print("It's a tie!")
-        gamerunning = False
-        exit()
-        
-
-
-def who_winner():
-    if (
-        horizon_lines_winner(board)
-        or vertical_lines_winner(board)
-        or across_lines_winner(board)
-    ):
-        print(f"The winner is {winner}.")
-        exit()
     
 
 def turn_player():
@@ -139,6 +110,36 @@ def computer(board):
         if board[position] == "*":
             board[position] = "o"
             turn_player()
+
+
+def check_draw(board):
+    global gamerunning
+    if "*" not in board:
+        display_board(board)
+        print("It's a tie!")
+        gamerunning = False
+        exit()
+        
+
+def who_winner():
+    if (
+        horizon_lines_winner(board)
+        or vertical_lines_winner(board)
+        or across_lines_winner(board)
+    ):
+        display_board(board)
+        print(f"The winner is {winner}.")
+        exit()
+
+
+def player_input(board):
+    inp = int(input("choose the number between 1 and 9: "))
+    os.system("cls" if os.name == "nt" else "clear")
+    if board[inp-1] == "*":
+        board[inp - 1] = currentplayer
+    else:
+        display_board(board)
+        print("oh the player have already taken!")
 
 
 def game_running():
