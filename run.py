@@ -10,15 +10,16 @@ def header_logo():
     print("\t--------------------------------")
 
 
-# when you fill the name and output display on screen
-def print_message(username):
-    print(f"\nHello {username}\nWelcome to Tic Tac Toe")
-
-
 # for the username to fill the box
 username = input("What's your name?\n")
-print_message(f"{username}\n")
+# print_message(f"{username}\n")
 print("\n")
+
+
+
+# when you fill the name and output display on screen
+def print_message(username):
+    print(f"\tHello {username}\n\tWelcome to Tic Tac Toe")
 
 
 """
@@ -129,18 +130,26 @@ def who_winner():
     ):
         display_board(board)
         print(f"The winner is {winner}.")
-        exit()
-
-
+    
+        
 def player_input(board):
     inp = int(input("choose the number between 1 and 9: "))
     os.system("cls" if os.name == "nt" else "clear")
-    if board[inp-1] == "*":
-        board[inp - 1] = currentplayer
+    if board[inp  -1] == "*":
+        board[inp  -1] = currentplayer
     else:
-        display_board(board)
         print("oh the player have already taken!")
+        
 
+def play_again():
+        user_input = input('Do do you want to play again, type: yes or no')
+        if user_input.lower() == 'yes':
+            game_running()
+        elif user_input.lower() == 'no':
+            print('Thank you for game')
+        else:
+            print('Goodbye!')
+        
 
 def game_running():
     while gamerunning:
@@ -152,6 +161,9 @@ def game_running():
         who_winner()
         check_draw(board)
         computer(board)
+        play_again()
 
 
 game_running()
+
+

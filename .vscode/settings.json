@@ -25,5 +25,7 @@
 "editor.defaultFormatter": "HookyQR.beautify",
 "python.formatting.provider": "black",
 "editor.fontSize": 20,
-"editor.wordWrap": "on"
+"editor.wordWrap": "on",
+"terminal.integrated.cursorStyle": "underline",
+"terminal.integrated.fontSize": 20
 }
