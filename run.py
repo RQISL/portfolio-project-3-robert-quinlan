@@ -130,6 +130,14 @@ def who_winner():
     ):
         display_board(board)
         print(f"The winner is {winner}.")
+        while True:
+            user_input = input('Do do you want to play again, type: yes or no: ')
+            if user_input.lower() == 'yes':
+                game_running()
+            elif user_input.lower() == 'no':
+                print('Thank you for game')
+                exit()
+            
     
         
 def player_input(board):
@@ -141,14 +149,8 @@ def player_input(board):
         print("oh the player have already taken!")
         
 
-def play_again():
-        user_input = input('Do do you want to play again, type: yes or no')
-        if user_input.lower() == 'yes':
-            game_running()
-        elif user_input.lower() == 'no':
-            print('Thank you for game')
-        else:
-            print('Goodbye!')
+# def play_again():
+        
         
 
 def game_running():
@@ -161,7 +163,7 @@ def game_running():
         who_winner()
         check_draw(board)
         computer(board)
-        play_again()
+        # play_again()
 
 
 game_running()
