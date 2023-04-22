@@ -145,6 +145,7 @@ def player_input(board):
 def game_running():
     while gamerunning:
         header_logo()
+        print_message(username)
         display_board(board)
         player_input(board)
         turn_player()
