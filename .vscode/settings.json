@@ -20,8 +20,10 @@
       "**/core.python*": true,
       "**/CVS": true
    },
-   "files.autoSave": "off",
+   "files.autoSave": "afterDelay",
    "workbench.colorTheme": "Visual Studio Dark",
 "editor.defaultFormatter": "HookyQR.beautify",
-"python.formatting.provider": "black"
+"python.formatting.provider": "black",
+"editor.fontSize": 20,
+"editor.wordWrap": "on"
 }

@@ -4,9 +4,10 @@ import os
 
 
 # for the head dispaly
-print("\t--------------------------------")
-print("\t         Tic Tac Toe       ")
-print("\t--------------------------------")
+def header_logo():
+    print("\t--------------------------------")
+    print("\t         Tic Tac Toe       ")
+    print("\t--------------------------------")
 
 
 # when you fill the name and output display on screen
@@ -34,7 +35,7 @@ from varible call board with the arrays
 """
 
 
-def displayboard(board):
+def display_board(board):
     print("+---+---+---+")
     print("| " + board[0] + " | " + board[1] + " | " + board[2] + " |")
     print("+---+---+---+")
@@ -54,21 +55,21 @@ The gamer turn to X or O onto the grid board
 """
 
 
-currentPlayer = "x"
+currentplayer = "x"
 winner = None
-gameRunning = True
+gamerunning = True
 
 
-def PlayerInput(board):
+def player_input(board):
     inp = int(input("choose the number between 1 and 9: "))
     os.system("cls" if os.name == "nt" else "clear")
-    if inp >= 1 and inp <= 9 and board[inp - 1]:
-        board[inp - 1] = currentPlayer
+    if board[inp-1] == "*":
+        board[inp - 1] = currentplayer
     else:
-        print("oh you have already spot!")
+        print("oh the player have already spot!")
 
 
-def Horizon_Lines_Winner(board):
+def horizon_lines_winner(board):
     global winner
     if board[0] == board[1] == board[2] and board[0] != "*":
         winner = board[0]
@@ -81,7 +82,7 @@ def Horizon_Lines_Winner(board):
         return True
 
 
-def Vertical_Lines_Winner(board):
+def vertical_lines_winner(board):
     global winner
     if board[0] == board[3] == board[6] and board[0] != "*":
         winner = board[0]
@@ -94,7 +95,7 @@ def Vertical_Lines_Winner(board):
         return True
 
 
-def Across_lines_Winner(board):
+def across_lines_winner(board):
     global winner
     if board[0] == board[4] == board[8] and board[0] != "*":
         winner = board[0]
@@ -104,48 +105,51 @@ def Across_lines_Winner(board):
         return True
 
 
-def check_Draw(board):
-    global gameRunning
+def check_draw(board):
+    global gamerunning
     if "*" not in board:
-        displayboard(board)
+        display_board(board)
         print("It's a tie!")
-        gameRunning = False
+        gamerunning = False
+        exit()
+        
 
 
-def whoWinner():
+def who_winner():
     if (
-        Horizon_Lines_Winner(board)
-        or Vertical_Lines_Winner(board)
-        or Across_lines_Winner(board)
+        horizon_lines_winner(board)
+        or vertical_lines_winner(board)
+        or across_lines_winner(board)
     ):
         print(f"The winner is {winner}.")
+        exit()
     
 
-def turnPlayer():
-    global currentPlayer
-    if currentPlayer == "x":
-        currentPlayer = "o"
+def turn_player():
+    global currentplayer
+    if currentplayer == "x":
+        currentplayer = "o"
     else:
-        currentPlayer = "x"
+        currentplayer = "x"
 
 
 def computer(board):
-    while currentPlayer == "o":
+    while currentplayer == "o":
         position = random.randint(0, 8)
         if board[position] == "*":
             board[position] = "o"
-            turnPlayer()
+            turn_player()
 
 
-# def clear_console():
-#     os.system("cls" if os.name == "nt" else "clear")
+def game_running():
+    while gamerunning:
+        header_logo()
+        display_board(board)
+        player_input(board)
+        turn_player()
+        who_winner()
+        check_draw(board)
+        computer(board)
 
 
-while gameRunning:
-    displayboard(board)
-    PlayerInput(board)
-    turnPlayer()
-    computer(board)
-    check_Draw(board)
-    whoWinner()
-    # clear_console()
+game_running()
