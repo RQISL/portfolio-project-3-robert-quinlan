@@ -1,6 +1,7 @@
 # import randon for the computer player side
 import random
 import os
+import colorama
 from colored import fg
 
 color_blue = fg('blue')
@@ -125,15 +126,8 @@ def check_draw(board):
     if "*" not in board:
         display_board(board)
         print(color_magenta + "It's a tie!")
-        while True:
-            user_input = input(color_blue + 'Do do you want to play again, type: yes or no: ')
-            if user_input.lower() == 'yes':
-                board = ["*", "*", "*", "*", "*", "*", "*", "*", "*"]
-                display_board(board)
-                break            
-            elif user_input.lower() == 'no':
-                print(color_magenta + "Goodbye!, Come back play again ;)\n")
-                exit()
+        gamerunning = False
+        exit()
         
 
 def who_winner():
