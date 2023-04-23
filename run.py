@@ -1,25 +1,32 @@
 # import randon for the computer player side
 import random
 import os
+from colored import fg
+
+color_blue = fg('blue')
+color_cyan = fg('cyan')
+color_red = fg('red')
+color_yellow = fg('yellow')
+color_magenta = fg('magenta')
+
 
 
 # for the head dispaly
 def header_logo():
-    print("\t--------------------------------")
-    print("\t         Tic Tac Toe       ")
-    print("\t--------------------------------")
+    print(color_blue + "\t--------------------------------")
+    print(color_red + "\t         Tic Tac Toe       ")
+    print(color_blue + "\t--------------------------------")
 
 
 # for the username to fill the box
-username = input("What's your name?\n")
-# print_message(f"{username}\n")
+username = input(color_cyan + "What's your name?\n")
 print("\n")
 
 
 
 # when you fill the name and output display on screen
 def print_message(username):
-    print(f"\tHello {username}\n\tWelcome to Tic Tac Toe")
+    print(color_blue + f"\tHello {username}\n\t" + color_yellow + "Welcome to Tic Tac Toe")
 
 
 """
@@ -37,13 +44,13 @@ from varible call board with the arrays
 
 
 def display_board(board):
-    print("+---+---+---+")
+    print(color_magenta + "+---+---+---+")
     print("| " + board[0] + " | " + board[1] + " | " + board[2] + " |")
-    print("+---+---+---+")
+    print(color_magenta + "+---+---+---+")
     print("| " + board[3] + " | " + board[4] + " | " + board[5] + " |")
-    print("+---+---+---+")
+    print(color_magenta + "+---+---+---+")
     print("| " + board[6] + " | " + board[7] + " | " + board[8] + " |")
-    print("+---+---+---+")
+    print(color_magenta + "+---+---+---+")
     print("\n")
 
 
@@ -56,7 +63,7 @@ The gamer turn to X or O onto the grid board
 """
 
 
-currentplayer = "x"
+currentplayer = "x" 
 winner = None
 gamerunning = True
 
@@ -117,40 +124,46 @@ def check_draw(board):
     global gamerunning
     if "*" not in board:
         display_board(board)
-        print("It's a tie!")
-        gamerunning = False
-        exit()
+        print(color_magenta + "It's a tie!")
+        while True:
+            user_input = input(color_blue + 'Do do you want to play again, type: yes or no: ')
+            if user_input.lower() == 'yes':
+                board = ["*", "*", "*", "*", "*", "*", "*", "*", "*"]
+                display_board(board)
+                break            
+            elif user_input.lower() == 'no':
+                print(color_magenta + "Goodbye!, Come back play again ;)\n")
+                exit()
         
 
 def who_winner():
+    global board
     if (
         horizon_lines_winner(board)
         or vertical_lines_winner(board)
         or across_lines_winner(board)
     ):
         display_board(board)
-        print(f"The winner is {winner}.")
+        print(color_magenta + f"The winner is {winner}.")
         while True:
-            user_input = input('Do do you want to play again, type: yes or no: ')
+            user_input = input(color_blue + 'Do do you want to play again, type: yes or no: ')
             if user_input.lower() == 'yes':
-                game_running()
+                board = ["*", "*", "*", "*", "*", "*", "*", "*", "*"]
+                display_board(board)
+                break            
             elif user_input.lower() == 'no':
-                print('Thank you for game')
+                print(color_magenta + "Goodbye!, Come play back again ;)\n")
                 exit()
             
     
         
 def player_input(board):
-    inp = int(input("choose the number between 1 and 9: "))
+    inp = int(input(color_magenta + "choose the number between 1 and 9: "))
     os.system("cls" if os.name == "nt" else "clear")
     if board[inp  -1] == "*":
         board[inp  -1] = currentplayer
     else:
-        print("oh the player have already taken!")
-        
-
-# def play_again():
-        
+        print(color_magenta + "Oh the player have already taken!")
         
 
 def game_running():
@@ -163,9 +176,6 @@ def game_running():
         who_winner()
         check_draw(board)
         computer(board)
-        # play_again()
 
 
 game_running()
-
-
