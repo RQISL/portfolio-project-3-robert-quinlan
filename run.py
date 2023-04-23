@@ -2,6 +2,7 @@
 import random
 import os
 from colored import fg
+from termcolor import colored
 
 color_blue = fg('blue')
 color_cyan = fg('cyan')
@@ -14,21 +15,24 @@ color_magenta = fg('magenta')
 # for the head dispaly
 def header_logo():
     print(color_blue + "\t--------------------------------")
-    print(color_red + "\t         Tic Tac Toe       ")
+    print(colored("\t                                ", 'red', 'on_white'))
+    print(colored("\t          Tic Tac Toe           ", 'red', 'on_white', attrs=['bold']))
+    print(colored("\t                                ", 'red', 'on_white'))
     print(color_blue + "\t--------------------------------\n")
 
 
 # for the username to fill the box
 username = input(color_cyan + "What's your name?\n")
+print(colored('Hello, World!', 'green', 'on_red'))
 print("\n")
 
 
 
 # when you fill the name and output display on screen
 def print_message(username):
-    print(color_blue + f"\tHello {username}\n\t" + color_yellow + "Welcome to Tic Tac Toe\n")
+    print(f"\033[5;32m\tHello {username}\n\t" + color_yellow + "Welcome to Tic Tac Toe\n")
 
-
+1
 """
 The displayboard create a grid box
 """
@@ -44,13 +48,13 @@ from varible call board with the arrays
 
 
 def display_board(board):
-    print(color_magenta + "\t+---+---+---+")
+    print("\033[1;32m\t+---+---+---+")
     print("\t| " + board[0] + " | " + board[1] + " | " + board[2] + " |")
-    print(color_magenta + "\t+---+---+---+")
+    print("\033[1;32m\t+---+---+---+")
     print("\t| " + board[3] + " | " + board[4] + " | " + board[5] + " |")
-    print(color_magenta + "\t+---+---+---+")
+    print("\033[1;32m\t+---+---+---+")
     print("\t| " + board[6] + " | " + board[7] + " | " + board[8] + " |")
-    print(color_magenta + "\t+---+---+---+")
+    print("\033[1;32m\t+---+---+---+")
     print("\n")
 
 
@@ -63,7 +67,7 @@ The gamer turn to X or O onto the grid board
 """
 
 
-currentplayer = "x" 
+currentplayer = "x"
 winner = None
 gamerunning = True
 
