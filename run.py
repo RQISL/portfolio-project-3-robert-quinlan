@@ -15,7 +15,7 @@ color_magenta = fg('magenta')
 def header_logo():
     print(color_blue + "\t--------------------------------")
     print(color_red + "\t         Tic Tac Toe       ")
-    print(color_blue + "\t--------------------------------")
+    print(color_blue + "\t--------------------------------\n")
 
 
 # for the username to fill the box
@@ -26,7 +26,7 @@ print("\n")
 
 # when you fill the name and output display on screen
 def print_message(username):
-    print(color_blue + f"\tHello {username}\n\t" + color_yellow + "Welcome to Tic Tac Toe")
+    print(color_blue + f"\tHello {username}\n\t" + color_yellow + "Welcome to Tic Tac Toe\n")
 
 
 """
@@ -44,13 +44,13 @@ from varible call board with the arrays
 
 
 def display_board(board):
-    print(color_magenta + "+---+---+---+")
-    print("| " + board[0] + " | " + board[1] + " | " + board[2] + " |")
-    print(color_magenta + "+---+---+---+")
-    print("| " + board[3] + " | " + board[4] + " | " + board[5] + " |")
-    print(color_magenta + "+---+---+---+")
-    print("| " + board[6] + " | " + board[7] + " | " + board[8] + " |")
-    print(color_magenta + "+---+---+---+")
+    print(color_magenta + "\t+---+---+---+")
+    print("\t| " + board[0] + " | " + board[1] + " | " + board[2] + " |")
+    print(color_magenta + "\t+---+---+---+")
+    print("\t| " + board[3] + " | " + board[4] + " | " + board[5] + " |")
+    print(color_magenta + "\t+---+---+---+")
+    print("\t| " + board[6] + " | " + board[7] + " | " + board[8] + " |")
+    print(color_magenta + "\t+---+---+---+")
     print("\n")
 
 
@@ -124,7 +124,7 @@ def check_draw(board):
     global gamerunning
     if "*" not in board:
         display_board(board)
-        print(color_magenta + "It's a tie!")
+        print(color_yellow + "\tIt's a tie!")
         gamerunning = False
         exit()
 
@@ -137,26 +137,26 @@ def who_winner():
         or across_lines_winner(board)
     ):
         display_board(board)
-        print(color_magenta + f"The winner is {winner}.")
+        print(color_yellow + f"\tThe winner is {winner}.")
         while True:
-            user_input = input(color_blue + 'Do do you want to play again, type: yes or no: ')
+            user_input = input(color_blue + '\tDo do you want to play again, type: yes or no: ')
             if user_input.lower() == 'yes':
                 board = ["*", "*", "*", "*", "*", "*", "*", "*", "*"]
                 display_board(board)
                 break            
             elif user_input.lower() == 'no':
-                print(color_magenta + "Goodbye!, Come play back again ;)\n")
+                print(color_magenta + "\tGoodbye!, Come play back again ;)\n")
                 exit()
             
     
         
 def player_input(board):
-    inp = int(input(color_magenta + "choose the number between 1 and 9: "))
+    inp = int(input(color_magenta + "\tchoose the number between 1 and 9: "))
     os.system("cls" if os.name == "nt" else "clear")
     if board[inp  -1] == "*":
         board[inp  -1] = currentplayer
     else:
-        print(color_magenta + "Oh the player have already taken!")
+        print(color_yellow + "\tOh the player have already taken!")
         
 
 def game_running():
