@@ -1,7 +1,6 @@
 # import randon for the computer player side
 import random
 import os
-import colorama
 from colored import fg
 
 color_blue = fg('blue')
@@ -128,7 +127,7 @@ def check_draw(board):
         print(color_magenta + "It's a tie!")
         gamerunning = False
         exit()
-        
+
 
 def who_winner():
     global board
