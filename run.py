@@ -23,7 +23,6 @@ def header_logo():
 
 # for the username to fill the box
 username = input(color_cyan + "What's your name?\n")
-print(colored('Hello, World!', 'green', 'on_red'))
 print("\n")
 
 
@@ -155,12 +154,25 @@ def who_winner():
     
         
 def player_input(board):
-    inp = int(input(color_magenta + "\tchoose the number between 1 and 9: "))
+    x = int(input(color_magenta + "\tchoose the number between 1 and 9: "))
     os.system("cls" if os.name == "nt" else "clear")
-    if board[inp  -1] == "*":
-        board[inp  -1] = currentplayer
+    if board[x  -1] == "*":
+        board[x  -1] = currentplayer
     else:
         print(color_yellow + "\tOh the player have already taken!")
+
+
+# def error_handle():
+#     while True:
+#         try:
+#             player_input(board)
+#             if 1 <= x <= 10:
+#                 break
+#             else:
+#                 print("Number not in range 1-10")
+#         except ValueError:
+#             print("Invalid input. Please enter an integer.")
+
         
 
 def game_running():
@@ -170,6 +182,7 @@ def game_running():
         display_board(board)
         player_input(board)
         turn_player()
+        # error_handle()
         who_winner()
         check_draw(board)
         computer(board)
