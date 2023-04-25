@@ -9,6 +9,8 @@ color_cyan = fg('cyan')
 color_red = fg('red')
 color_yellow = fg('yellow')
 color_magenta = fg('magenta')
+color_light_blue = fg('light_blue')
+color_light_cyan = fg('light_cyan')
 
 
 
@@ -155,20 +157,19 @@ def who_winner():
 def player_input(board):
     while True:
         try:
-            x = int(input(color_magenta + "\tchoose the number between 1 and 9: "))
+            x = int(input(color_yellow + "\tchoose the number between 1 and 9: "))
             if 1 <= x <= 9:
                 break
             else:
-                print("There is over, please pick the number between 1 and 9.")
+                print(color_light_blue + "\tThere is over, please pick the number between 1 and 9.")
         except ValueError:
-            print("Invalid input. Please enter an integer.")
+            print(color_light_cyan + "\tInvalid input. Please enter an integer.")
 
     os.system("cls" if os.name == "nt" else "clear")
     if board[x - 1] == "*":
         board[x - 1] = currentplayer
     else:
         print(color_yellow + "\tOh the player have already taken!")
-        # return x
 
         
 
