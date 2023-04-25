@@ -151,27 +151,24 @@ def who_winner():
                 print(color_magenta + "\tGoodbye!, Come play back again ;)\n")
                 exit()
             
-    
-        
+      
 def player_input(board):
-    x = int(input(color_magenta + "\tchoose the number between 1 and 9: "))
+    while True:
+        try:
+            x = int(input(color_magenta + "\tchoose the number between 1 and 9: "))
+            if 1 <= x <= 9:
+                break
+            else:
+                print("There is over, please pick the number between 1 and 9.")
+        except ValueError:
+            print("Invalid input. Please enter an integer.")
+
     os.system("cls" if os.name == "nt" else "clear")
-    if board[x  -1] == "*":
-        board[x  -1] = currentplayer
+    if board[x - 1] == "*":
+        board[x - 1] = currentplayer
     else:
         print(color_yellow + "\tOh the player have already taken!")
-
-
-# def error_handle():
-#     while True:
-#         try:
-#             player_input(board)
-#             if 1 <= x <= 10:
-#                 break
-#             else:
-#                 print("Number not in range 1-10")
-#         except ValueError:
-#             print("Invalid input. Please enter an integer.")
+        # return x
 
         
 
@@ -182,7 +179,6 @@ def game_running():
         display_board(board)
         player_input(board)
         turn_player()
-        # error_handle()
         who_winner()
         check_draw(board)
         computer(board)
