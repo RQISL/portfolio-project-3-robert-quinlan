@@ -138,6 +138,7 @@ def check_draw(board):
         print(color_yellow + "\tIt's a tie!")
         gamerunning = False
         exit()
+    
 
 
 def who_winner():
@@ -188,15 +189,15 @@ def clear_screen():
 
 def game_running():
     header_logo()
+    print_message(username)
     while gamerunning:
-        clear_screen()
-        print_message(username)
         display_board(board)
         player_input(board)
         turn_player()
         who_winner()
         check_draw(board)
         computer(board)
+        clear_screen()
         
 
 game_running()
