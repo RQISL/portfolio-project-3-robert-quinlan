@@ -140,17 +140,18 @@ def who_winner():
         horizon_lines_winner(board)
         or vertical_lines_winner(board)
         or across_lines_winner(board)
-    ):
+    ):  
         display_board(board)
         print(color_yellow + f"\tThe winner is {winner}.")
         while True:
             user_input = input(color_blue + '\tDo do you want to play again, type: yes or no: ')
             if user_input.lower() == 'yes':
+                os.system("cls" if os.name == "nt" else "clear")
                 board = ["*", "*", "*", "*", "*", "*", "*", "*", "*"]
                 display_board(board)
                 break            
             elif user_input.lower() == 'no':
-                print(color_magenta + "\tGoodbye!, Come play back again ;)\n")
+                print(color_magenta + "\tGoodbye!, Come back to play again ;)\n")
                 exit()
             
       
@@ -159,18 +160,19 @@ def player_input(board):
         try:
             x = int(input(color_yellow + "\tchoose the number between 1 and 9: "))
             if 1 <= x <= 9:
-                break
+                if board[x - 1] == "*":
+                    board[x - 1] = currentplayer
+                    break
+                else:
+                    print(color_cyan + "\tOh the player have already taken!")
             else:
-                print(color_light_blue + "\tThere is over, please pick the number between 1 and 9.")
+                print(color_light_blue + "\tThere is over 9, please pick the number between 1 and 9.")
         except ValueError:
-            print(color_light_cyan + "\tInvalid input. Please enter an integer.")
-
+            print(color_light_cyan + "\tInvalid input. Please enter numbers between 1 and 9.")
     os.system("cls" if os.name == "nt" else "clear")
-    if board[x - 1] == "*":
-        board[x - 1] = currentplayer
-    else:
-        print(color_yellow + "\tOh the player have already taken!")
 
+
+    
         
 
 def game_running():
