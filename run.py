@@ -1,7 +1,7 @@
 # import randon for the computer player side
 import random
 import os
-from colored import fg
+from colored import fg, bg, attr
 from termcolor import colored
 
 color_blue = fg('blue')
@@ -11,6 +11,7 @@ color_yellow = fg('yellow')
 color_magenta = fg('magenta')
 color_light_blue = fg('light_blue')
 color_light_cyan = fg('light_cyan')
+color_rosy_brown =fg('rosy_brown')
 
 
 
@@ -31,9 +32,14 @@ print("\n")
 
 # when you fill the name and output display on screen
 def print_message(username):
-    print(f"\033[5;32m\tHello {username}\n\t" + color_yellow + "Welcome to Tic Tac Toe\n")
-
-1
+    print(f"\033[5;32m\tHello {username}\n\t" + color_yellow + "Welcome to Tic Tac Toe, \n")
+    print(f"\t{fg(30)}{attr(1)} How do use play play rule: \n")
+    print(f"\t{fg(62)}  - 'x' is your player")
+    print(f"\t{fg(62)}  - 'o' is computer's player")
+    print(f"\t{fg(62)}  - Only choose between 1 and 9")
+    print(f"\t{fg(62)}  - when the winner is then, there are either type 'yes' or 'no'\n")
+    print(f"\t{fg(74)}  - Enjoy play tic tac toe!\n")
+    
 """
 The displayboard create a grid box
 """
@@ -142,19 +148,22 @@ def who_winner():
         or across_lines_winner(board)
     ):  
         display_board(board)
-        print(color_yellow + f"\tThe winner is {winner}.")
+        print(color_yellow + f"\tThe winner is {winner}.\n")
         while True:
-            user_input = input(color_blue + '\tDo do you want to play again, type: yes or no: ')
-            if user_input.lower() == 'yes':
-                os.system("cls" if os.name == "nt" else "clear")
-                board = ["*", "*", "*", "*", "*", "*", "*", "*", "*"]
-                display_board(board)
-                break            
-            elif user_input.lower() == 'no':
-                print(color_magenta + "\tGoodbye!, Come back to play again ;)\n")
-                exit()
-            
-      
+                user_input = input(color_blue + '\tDo do you want to play again, type: yes or no: ')
+                print('\n')
+                if user_input.lower() == 'yes':
+                    os.system("cls" if os.name == "nt" else "clear")
+                    board = ["*", "*", "*", "*", "*", "*", "*", "*", "*"]
+                    display_board(board)
+                    break
+                elif user_input.lower() == 'no':
+                    print(color_magenta + "\tGoodbye!, Come back to play again ;)\n")
+                    exit()
+                else:
+                    print(color_rosy_brown + '\tplease use type either "yes" or "no".\n')
+                
+                    
 def player_input(board):
     while True:
         try:
@@ -164,11 +173,11 @@ def player_input(board):
                     board[x - 1] = currentplayer
                     break
                 else:
-                    print(color_cyan + "\tOh the player have already taken!")
+                    print(color_cyan + "\tOh the player have already taken!\n")
             else:
-                print(color_light_blue + "\tThere is over 9, please pick the number between 1 and 9.")
+                print(color_light_blue + "\tThere is over 9, please pick the number between 1 and 9.\n")
         except ValueError:
-            print(color_light_cyan + "\tInvalid input. Please enter numbers between 1 and 9.")
+            print(color_light_cyan + "\tInvalid input. Please enter numbers between 1 and 9.\n")
     os.system("cls" if os.name == "nt" else "clear")
 
 
@@ -177,6 +186,7 @@ def player_input(board):
 
 def game_running():
     while gamerunning:
+        os.system("cls" if os.name == "nt" else "clear")
         header_logo()
         print_message(username)
         display_board(board)
@@ -185,6 +195,6 @@ def game_running():
         who_winner()
         check_draw(board)
         computer(board)
-
+    
 
 game_running()
