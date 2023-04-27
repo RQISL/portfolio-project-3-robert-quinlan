@@ -132,18 +132,18 @@ def computer(board):
 
 
 def check_draw(board):
-    global gamerunning
+    # global gamerunning
     if "*" not in board:
         display_board(board)
         print(color_yellow + "\tIt's a tie!")
-        gamerunning = False
+        # gamerunning = False
         exit()
     
 
 
 def who_winner():
     global board
-    global gamerunning
+    # global gamerunning
     if (
         horizon_lines_winner(board)
         or vertical_lines_winner(board)
@@ -155,7 +155,7 @@ def who_winner():
                 user_input = input(color_blue + '\tDo do you want to play again, type: yes or no: ')
                 print('\n')
                 if user_input.lower() == 'yes':
-                    os.system("cls" if os.name == "nt" else "clear")
+                    # os.system("cls" if os.name == "nt" else "clear")
                     board = ["*", "*", "*", "*", "*", "*", "*", "*", "*"]
                     display_board(board)
                     break
@@ -164,7 +164,7 @@ def who_winner():
                     exit()
                 else:
                     print(color_rosy_brown + '\tplease use type either "yes" or "no".\n')
-                    gamerunning = False
+                    # gamerunning = False
                 
                     
 def player_input(board):
@@ -174,7 +174,7 @@ def player_input(board):
             if 1 <= x <= 9:
                 if board[x - 1] == "*":
                     board[x - 1] = currentplayer
-                    os.system("cls" if os.name == "nt" else "clear")
+                    # os.system("cls" if os.name == "nt" else "clear")
                     break
                 else:
                     print(color_cyan + "\tOh the player have already taken!\n")
