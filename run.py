@@ -189,6 +189,7 @@ def clear_screen():
 def game_running():
     header_logo()
     while gamerunning:
+        clear_screen()
         print_message(username)
         display_board(board)
         player_input(board)
@@ -196,6 +197,6 @@ def game_running():
         who_winner()
         check_draw(board)
         computer(board)
-    
+        
 
 game_running()
