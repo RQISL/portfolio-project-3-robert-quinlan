@@ -171,6 +171,7 @@ def player_input(board):
             if 1 <= x <= 9:
                 if board[x - 1] == "*":
                     board[x - 1] = currentplayer
+                    os.system("cls" if os.name == "nt" else "clear")
                     break
                 else:
                     print(color_cyan + "\tOh the player have already taken!\n")
@@ -178,7 +179,8 @@ def player_input(board):
                 print(color_light_blue + "\tThere is over 9, please pick the number between 1 and 9.\n")
         except ValueError:
             print(color_light_cyan + "\tInvalid input. Please enter numbers between 1 and 9.\n")
-    os.system("cls" if os.name == "nt" else "clear")
+            
+    
 
 
     
@@ -186,7 +188,6 @@ def player_input(board):
 
 def game_running():
     while gamerunning:
-        os.system("cls" if os.name == "nt" else "clear")
         header_logo()
         print_message(username)
         display_board(board)
