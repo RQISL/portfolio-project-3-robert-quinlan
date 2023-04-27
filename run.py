@@ -141,7 +141,6 @@ def check_draw(board):
 
 
 def who_winner():
-    print("who_winner called")
     global board
     global gamerunning
     if (
@@ -189,8 +188,8 @@ def clear_screen():
 
 def game_running():
     header_logo()
-    print_message(username)
     while gamerunning:
+        print_message(username)
         display_board(board)
         player_input(board)
         turn_player()
