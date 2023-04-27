@@ -179,17 +179,15 @@ def player_input(board):
                 print(color_light_blue + "\tThere is over 9, please pick the number between 1 and 9.\n")
         except ValueError:
             print(color_light_cyan + "\tInvalid input. Please enter numbers between 1 and 9.\n")
+
+def clear_screen():
+    os.system("cls" if os.name == "nt" else "clear")
             
-    
-
-
-    
-        
 
 def game_running():
+    header_logo()
+    print_message(username)
     while gamerunning:
-        header_logo()
-        print_message(username)
         display_board(board)
         player_input(board)
         turn_player()
