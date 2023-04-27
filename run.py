@@ -141,7 +141,9 @@ def check_draw(board):
 
 
 def who_winner():
+    print("who_winner called")
     global board
+    global gamerunning
     if (
         horizon_lines_winner(board)
         or vertical_lines_winner(board)
@@ -162,6 +164,7 @@ def who_winner():
                     exit()
                 else:
                     print(color_rosy_brown + '\tplease use type either "yes" or "no".\n')
+                    gamerunning = False
                 
                     
 def player_input(board):
