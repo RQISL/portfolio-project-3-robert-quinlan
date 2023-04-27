@@ -11,15 +11,15 @@ color_yellow = fg('yellow')
 color_magenta = fg('magenta')
 color_light_blue = fg('light_blue')
 color_light_cyan = fg('light_cyan')
-color_rosy_brown =fg('rosy_brown')
-
+color_rosy_brown = fg('rosy_brown')
 
 
 # for the head dispaly
 def header_logo():
     print(color_blue + "\t--------------------------------")
     print(colored("\t                                ", 'red', 'on_white'))
-    print(colored("\t          Tic Tac Toe           ", 'red', 'on_white', attrs=['bold']))
+    print(colored("\t          Tic Tac Toe           ", 'red', 'on_white',
+                                                        attrs=['bold']))
     print(colored("\t                                ", 'red', 'on_white'))
     print(color_blue + "\t--------------------------------\n")
 
@@ -29,17 +29,19 @@ username = input(color_cyan + "What's your name?\n")
 print("\n")
 
 
-
 # when you fill the name and output display on screen
 def print_message(username):
-    print(f"\033[5;32m\tHello {username}\n\t" + color_yellow + "Welcome to Tic Tac Toe, \n")
+    print(f"\033[5;32m\tHello {username}\n\t" + color_yellow
+          + "Welcome to Tic Tac Toe, \n")
     print(f"\t{fg(30)}{attr(1)} How do use play play rule: \n")
     print(f"\t{fg(62)}  - 'x' is your player")
     print(f"\t{fg(62)}  - 'o' is computer's player")
     print(f"\t{fg(62)}  - Only choose between 1 and 9")
-    print(f"\t{fg(62)}  - when the winner is then, there are either type 'yes' or 'no'\n")
+    print(f"\t{fg(62)}  - when the winner is then",
+          "there are either type 'yes' or 'no'\n")
     print(f"\t{fg(74)}  - Enjoy play tic tac toe!\n")
-    
+
+
 """
 The displayboard create a grid box
 """
@@ -113,7 +115,7 @@ def across_lines_winner(board):
     elif board[2] == board[4] == board[6] and board[2] != "*":
         winner = board[2]
         return True
-    
+
 
 def turn_player():
     global currentplayer
@@ -132,13 +134,12 @@ def computer(board):
 
 
 def check_draw(board):
-    # global gamerunning
+    global gamerunning
     if "*" not in board:
         display_board(board)
         print(color_yellow + "\tIt's a tie!")
-        # gamerunning = False
+        gamerunning = False
         exit()
-    
 
 
 def who_winner():
@@ -148,44 +149,51 @@ def who_winner():
         horizon_lines_winner(board)
         or vertical_lines_winner(board)
         or across_lines_winner(board)
-    ):  
+    ):
         display_board(board)
         print(color_yellow + f"\tThe winner is {winner}.\n")
         while True:
-                user_input = input(color_blue + '\tDo do you want to play again, type: yes or no: ')
-                print('\n')
-                if user_input.lower() == 'yes':
-                    # os.system("cls" if os.name == "nt" else "clear")
-                    board = ["*", "*", "*", "*", "*", "*", "*", "*", "*"]
-                    display_board(board)
-                    break
-                elif user_input.lower() == 'no':
-                    print(color_magenta + "\tGoodbye!, Come back to play again ;)\n")
-                    exit()
-                else:
-                    print(color_rosy_brown + '\tplease use type either "yes" or "no".\n')
-                    # gamerunning = False
-                
-                    
+            user_input = input(color_blue + "\tDo do you want to play again,",
+                               "type: yes or no: ")
+            print('\n')
+            if user_input.lower() == 'yes':
+                os.system("cls" if os.name == "nt" else "clear")
+                board = ["*", "*", "*", "*", "*", "*", "*", "*", "*"]
+                display_board(board)
+                break
+            elif user_input.lower() == 'no':
+                print(color_magenta + "\tGoodbye!, Come back to play",
+                      "again ;)\n")
+                exit()
+            else:
+                print(color_rosy_brown + "\tplease use type",
+                      "either 'yes' or 'no'.\n")
+                # gamerunning = False
+
+
 def player_input(board):
     while True:
         try:
-            x = int(input(color_yellow + "\tchoose the number between 1 and 9: "))
+            x = int(input(color_yellow + "\tchoose the number",
+                    "between 1 and 9: "))
             if 1 <= x <= 9:
                 if board[x - 1] == "*":
                     board[x - 1] = currentplayer
-                    # os.system("cls" if os.name == "nt" else "clear")
+                    os.system("cls" if os.name == "nt" else "clear")
                     break
                 else:
                     print(color_cyan + "\tOh the player have already taken!\n")
             else:
-                print(color_light_blue + "\tThere is over 9, please pick the number between 1 and 9.\n")
+                print(color_light_blue + "\tThere is over 9,",
+                      "please pick the number between 1 and 9.\n")
         except ValueError:
-            print(color_light_cyan + "\tInvalid input. Please enter numbers between 1 and 9.\n")
+            print(color_light_cyan + "\tInvalid input.",
+                  "Please enter numbers between 1 and 9.\n")
+
 
 def clear_screen():
     os.system("cls" if os.name == "nt" else "clear")
-            
+
 
 def game_running():
     header_logo()
@@ -198,6 +206,6 @@ def game_running():
         check_draw(board)
         computer(board)
         clear_screen()
-        
+
 
 game_running()
