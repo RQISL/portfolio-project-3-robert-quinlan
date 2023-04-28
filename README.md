@@ -32,6 +32,7 @@ Features
 -------------
 * The Tic Tac Toe have two players play turning between the computer and the human. The computer's player is 'o' and the human's player is 'x'. 
 
+![CI logo](assets/images/Project_3_mockup_responsive_screen.png)
 
 Existing Features
 -----------------------
