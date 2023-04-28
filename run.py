@@ -1,6 +1,6 @@
-# import randon for the computer player side.
+# import random for the computer player side.
 import random
-# import os that use clear off the screen
+# import os that uses clear of the screen
 # to prevent repeating display sections.
 import os
 # import colored and termcolor for colors.
@@ -11,7 +11,7 @@ learning to vary color syntax.
 from colored import fg, bg, attr
 from termcolor import colored
 
-# store from the color options.
+# Store from the color options.
 color_blue = fg('blue')
 color_cyan = fg('cyan')
 color_red = fg('red')
@@ -22,7 +22,7 @@ color_light_cyan = fg('light_cyan')
 color_rosy_brown = fg('rosy_brown')
 
 
-# For the head dispaly.
+# For the head display.
 def header_logo():
     print(color_blue + "\t--------------------------------")
     print(colored("\t                                ", 'red', 'on_white'))
@@ -32,12 +32,12 @@ def header_logo():
     print(color_blue + "\t--------------------------------\n")
 
 
-# For the username to entry the box.
+# For the username to enter the box.
 username = input(color_cyan + "What's your name?\n")
 print("\n")
 
 
-# When you entry name and output display on screen and included colors.
+# When you enter the name and output display on the screen and included colors.
 def print_message(username):
     print(f"\033[5;32m\tHello {username}\n\t" + color_yellow
           + "Welcome to Tic Tac Toe, \n")
@@ -50,11 +50,11 @@ def print_message(username):
     print(f"\t{fg(74)}  - Enjoy play tic tac toe!\n")
 
 
-# the spots in the board.
+# the spots on the board.
 board = ["*", "*", "*", "*", "*", "*", "*", "*", "*"]
 
 
-# The displayboard create a grid box with the spot.
+# The display board create a grid box with the spot.
 def display_board(board):
     print("\033[1;32m\t+---+---+---+")
     print("\t| " + board[0] + " | " + board[1] + " | " + board[2] + " |")
@@ -66,13 +66,13 @@ def display_board(board):
     print("\n")
 
 
-# The global for funtion as follows below:
+# The global function is as follows below:
 currentplayer = "x"
 winner = None
 gamerunning = True
 
 """
-The create the board for the players, check the board who is winner.
+They create the board for the players and check the board who is a winner.
 there are three sections for horizon lines, vertical lines and
 across lines.
 """
@@ -123,7 +123,7 @@ def turn_player():
         currentplayer = "x"
 
 
-# The computer player use 'o'.
+# The computer player uses 'o'.
 def computer(board):
     while currentplayer == "o":
         position = random.randint(0, 8)
@@ -132,14 +132,14 @@ def computer(board):
             turn_player()
 
 
-# The check if there are tie.
+# The Check if there is a tie.
 def check_draw(board):
     """
-    It was working before when I asked tutor because I found it have
-    some glitch and I want to solution check_draw. we tried to figure it out
-    what was problem.Unforunately, my time allowance was hit up. I ran to fix
-    sereval times and could not find solution. My deadline was so closed then
-    I stop to fix and move on to do ReadMe.
+    It was working before when I asked the tutor because I found it have
+    some glitches and I want to solve check_draw. we tried to figure out
+    what was the problem. Unfortunately, my time allowance was hit up. I ran to fix
+    it several times and could not find a solution. My deadline was so close then
+    I stop to fix it and move on to do ReadMe.
     """
     global gamerunning
     if "*" not in board:
@@ -152,11 +152,11 @@ def check_draw(board):
 def who_winner():
     """
     To check who is winner, there are sections if the winner came up,
-    to ask the user to play again yes or no and there is error handle
-    when the type e.g 'n' then prompt to ask to correct type
+    to ask the user to play again yes or no and there is an error handle
+    when the type e.g 'n' then prompts to ask to correct type
     either 'yes' or 'no'.
 
-    If the user type 'yes' then start contiune playing.
+    If the user type 'yes' then start to continue playing.
 
     If the user type 'no' then prompt to say "Goodbye! Come back to play again"
     """
@@ -191,14 +191,14 @@ def who_winner():
 def player_input(board):
     """
     The user press to the number between 1 and 9.
-    There is error handle when the type e.g '45' then
+    There is an error handle when the type e.g '45' then
     prompt to ask to correct pick the number between 1 and 9.
 
     If the user type 'g' then the prompt ask to use the number
 
     If the user type pick the number where the player had taken
-    then prompt to say "Oh the player have already taken" and
-    let the human player choose to the spot themselve.
+    then prompt to say "Oh the player has already taken" and
+    let the human player choose to spot themselves.
     """
     while True:
         try:
@@ -215,7 +215,7 @@ def player_input(board):
                     print(color_cyan + "\tOh the player have already taken!\n")
             else:
                 print(color_light_blue + "\tThere is over 9,",
-                      "please pick the number between 1 and 9.\n")
+                      "Please pick the number between 1 and 9.\n")
         except ValueError:
             print(color_light_cyan + "\tInvalid input.",
                   "Please enter numbers between 1 and 9.\n")
@@ -235,11 +235,11 @@ def game_running():
     header_logo()
     # Display user name.
     print_message(username)
-    # Call functions above to run loop the game.
+    # Call functions above to run the loop of the game.
     while gamerunning:
         # The grid board with the spot.
         display_board(board)
-        # player pick numbers and included error handles.
+        # player picks numbers and included error handles.
         player_input(board)
         # The human player is turning for 'x'
         turn_player()
