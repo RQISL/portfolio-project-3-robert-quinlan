@@ -153,8 +153,8 @@ def who_winner():
         display_board(board)
         print(color_yellow + f"\tThe winner is {winner}.\n")
         while True:
-            user_input = input(color_blue + "\tDo do you want to play again,",
-                               "type: yes or no: ")
+            user_input = input(color_blue + "\tDo do you want"
+                               + "to play again, type: yes or no: ")
             print('\n')
             if user_input.lower() == 'yes':
                 os.system("cls" if os.name == "nt" else "clear")
@@ -174,8 +174,8 @@ def who_winner():
 def player_input(board):
     while True:
         try:
-            x = int(input(color_yellow + "\tchoose the number",
-                    "between 1 and 9: "))
+            x = int(input(color_yellow + "\tchoose the number"
+                    + "between 1 and 9: "))
             if 1 <= x <= 9:
                 if board[x - 1] == "*":
                     board[x - 1] = currentplayer
