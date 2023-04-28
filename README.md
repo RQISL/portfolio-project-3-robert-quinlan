@@ -117,13 +117,13 @@ Existing Features
 ## Testing 
 
 ### The browser compatibility
-* The testing runs testing for Chrome, Opera, Microsoft Edge, Safari and Firefox for the Heroku app. I found Chrome, Opera and Microsoft Edge, it does not great visual while you are playing a game. I would not recommend using those.
+* The testing runs for Chrome, Opera, Microsoft Edge, Safari and Firefox for the Heroku app. I found Chrome, Opera and Microsoft Edge, it does not great visual while you are playing a game. I would not recommend using those.
 
 * I am finding Safari and Firefox, it does very clear visuals while playing. I would recommend using Safari or Firefox.
 
 ### The devices
 
-* I was testing on my iPhone and seem it does not work at all but my mentioned Rory does work on his mobile device.
+* I was testing on my iPhone and seem it does not work at all but my mentor Rory does work on his mobile device.
 
 ### The test running game in Heroku app
 
@@ -184,7 +184,7 @@ then click on Verify button.
 
 I learned very new to me use Python. I enjoyed creating the Tic Tac Toe in Python.
 
-The Tutors team was great support and encourage me to deploy learning to use Python.
+The Tutors team was great support and encourage me to developed learning to use Python.
 
 My mentor had good feedback and helps with my process improvement on the site project. 
 
