@@ -137,9 +137,9 @@ def check_draw(board):
     """
     It was working before when I asked the tutor because I found it have
     some glitches and I want to solve check_draw. we tried to figure out
-    what was the problem. Unfortunately, my time allowance was hit up. I ran to fix
-    it several times and could not find a solution. My deadline was so close then
-    I stop to fix it and move on to do ReadMe.
+    what was the problem. Unfortunately, my time allowance was hit up.
+    I ran to fix it several times and could not find a solution.
+    My deadline was so close then I stop to fix it and move on to do ReadMe.
     """
     global gamerunning
     if "*" not in board:
