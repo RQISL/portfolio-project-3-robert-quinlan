@@ -1,21 +1,21 @@
 
 -------------------------------------------------------------------------------------------------------
-### Please note: I am the first language is ISL (Irish Sign Language). I write in the second English language. I hope you read and understand the ReadMe.
+### Please note: I am first language is ISL (Irish Sign Language). I write in the second English language. I hope you read and understand the ReadMe.
 -------------------------------------------------------------------------------------------------------
 
 ## Concept Project
 
-* The concept project for the Tic Tac Toe. The design function is very basically in Python.
+* The concept project for the Tic Tac Toe. The design function is very basic in Python.
 
-- The projects development follows below:
+- The project's development follows below:
 
 ## Flowchart 
 * Design for the functions:
 <details>
 <summary>See Flowchart click here</summary>
-<img src="assets/images/Flowchart_Tic_Tac_Toe_part_1.jpg" alt="design the flowchart for Tic Tac Toe">
+<img src="assets/images/Flowchart_Tic_Tac_Toe_part_1.jpg" alt=" design the flowchart for Tic Tac Toe">
 <br>
-<img src="assets/images/Flowchart_Tic_Tac_Toe_part_2.jpg" alt="design the flowchart for Tic Tac Toe">
+<img src="assets/images/Flowchart_Tic_Tac_Toe_part_2.jpg" alt=" design the flowchart for Tic Tac Toe">
 </details>
 
 -------------------------------------------------------------------------------------------------------
@@ -23,14 +23,14 @@
 
 ## Logo: Tic Tac Toe
 - The logo head Tic Tac Toe, the font color is red and the background is white.
-- When the user entry name then The display shows up "Hello 'username' and 'Welcome to play Tic Tac Toe'.
-- The rule is display to instructed how to play the game. 
+- When the user enters the name then The display shows up "Hello 'username' and 'Welcome to play Tic Tac Toe'.
+- The rule is displayed to instruct how to play the game. 
 
 ![CI logo](assets/images/Logo_welcome_rule.png)
 
 Features
 -------------
-* The Tic Tac Toe have two players play turning between the computer and human. The compputer's player is 'o' and human's player is 'x'. 
+* The Tic Tac Toe have two players play turning between the computer and the human. The computer's player is 'o' and the human's player is 'x'. 
 
 
 Existing Features
@@ -38,79 +38,78 @@ Existing Features
 ### Start game
 
 * <strong>The T.T.T begin game.</strong> 
-  - Please see the function as flowchart as see above [Flowchart](#flowchart). I am put the images sections to decrible lists how the player is beginning.... 
+  - Please see the function as flowchart as seen above [Flowchart](#flowchart). I am putting the sections of the image to describe lists of how the player is beginning... 
 
 <details>
 <summary><strong style="font-size:18px">See images sections click here</strong></summary>
 
-## Ask user entry the name
+## Ask the user to enter the name
 <br>
-  <img src="assets/images/Ask_user_name.png" alt="Screenshot show to ask the user entry the name before start start Tic Tac Toe game">
+  <img src="assets/images/Ask_user_name.png" alt="Screenshot show to ask the user enter the name before starting Tic Tac Toe game">
 <br>
 
 ## Start game
 <br>
-  <img src="assets/images/Start_game.png" alt="Screenshot show how the start Tic Tac Toe game">
+  <img src="assets/images/Start_game.png" alt="Screenshot show begins the Tic Tac Toe game">
 <br>
 
-## Ask user press the number between 1 and 9
+## Ask the user to press the number between 1 and 9
 <br>
 
-  <img src="assets/images/Press_number.png" alt="Screenshot show to ask the user entry the name before start start Tic Tac Toe game">
+  <img src="assets/images/Press_number.png" alt="Screenshot show to ask the user entry pick the numbers">
 <br>
 
 ## The human player's winner by 'x'
 <br>
 
-  <img src="assets/images/Ask_play_again.png" alt="Screenshot show how the start Tic Tac Toe game">
+  <img src="assets/images/Ask_play_again.png" alt="Screenshot show who is winner by 'x'">
 <br>
 
 ## The computer player's winner by 'o'
 <br>
 
-  <img src="assets/images/Computer_winner.png" alt="Screenshot show to ask the user entry the name before start start Tic Tac Toe game">
+  <img src="assets/images/Computer_winner.png" alt="Screenshot show who is winner by 'o'">
 <br>
 
 ## The tie 
 <br>
 
-  <img src="assets/images/Problem_tie.png" alt="Screenshot show to ask the user entry the name before start start Tic Tac Toe game">
+  <img src="assets/images/Problem_tie.png" alt="Screenshot show the tie!">
 <br>
 
-## Ask user to play again either typing 'yes' or 'no'
+## Ask the user to play again either typing 'yes' or 'no'
 <br>
 
-  <img src="assets/images/Ask_play_again.png" alt="Screenshot show to ask the user entry the name before start start Tic Tac Toe game">
+  <img src="assets/images/Ask_play_again.png" alt="Screenshot show to ask the user entry yes or no">
 <br>
 
-## The human player to type "yes" then the computer's player will start at the first then turn human player conitune...
+## The human player types "yes" then the computer's player will start at the first and then turn the human player to continue...
 <br>
 
-  <img src="assets/images/Turn_Computer_player.png" alt="Screenshot show how the start Tic Tac Toe game">
+  <img src="assets/images/Turn_Computer_player.png" alt="Screenshot show to ask user type 'yes' or 'no'">
 <br>
 
 ## Error handlers
-  - Over 9 number to show up error
+  - Over 9 numbers show up as an error
 
-  <img src="assets/images/Error_over_9.png" alt="Screenshot show how the start Tic Tac Toe game">
+  <img src="assets/images/Error_over_9.png" alt="Screenshot show, the error handle to ask user to use number between 1 and 9">
 
-  - letter error, to ask user entry the number between 1 and 9
+  - letter error, to ask the user to enter the number between 1 and 9
 
-  <img src="assets/images/Error_letter.png" alt="Screenshot show how the start Tic Tac Toe game">
+  <img src="assets/images/Error_letter.png" alt="Screenshot show, the error handle to ask user to use number between 1 and 9">
 
-  - Error show up the player taken either 'x' or 'o'
+  - Error shows up the player takes either 'x' or 'o'
 
-  <img src="assets/images/Player_taken.png" alt="Screenshot show how the start Tic Tac Toe game">
+  <img src="assets/images/Player_taken.png" alt="Screenshot show, the error handler to ask the user that the player have taken">
 
-  - Error show up, ask the user to typing 'yes' or 'no'
+  - Error shows up, ask the user to type 'yes' or 'no'
 
-  <img src="assets/images/Error_yes_or_no.png" alt="Screenshot show how the start Tic Tac Toe game">
+  <img src="assets/images/Error_yes_or_no.png" alt="Screenshot show, the error handler to ask a user to type 'yes' or 'no'">
 
-## Ask the user, the human player type 'no' the display show up to say "Goodbye! Come back to play again :)"
+## Ask the user, the human player type 'no' and the display show up to say "Goodbye! Come back to play again :)"
 <br>
 
-  <img src="assets/images/End_game.png" alt="Screenshot show how the start Tic Tac Toe game">
-<br>
+  <img src="assets/images/End_game.png" alt="Screenshot show, the user type 'no' to say 'Goodbye!, Come back to play again'">
 <br>
 
 </details> 
@@ -118,86 +117,115 @@ Existing Features
 ## Testing 
 
 ### The browser compatibility
-* The testing runs testing for Chrome, Opera, Microsoft Edge, Safari and Firefox for Heroku app. I found the Chrome, Opera and Micosoft Edge, it does not great visual while you are playing game. I would not recommand to use those.
+* The testing runs testing for Chrome, Opera, Microsoft Edge, Safari and Firefox for the Heroku app. I found Chrome, Opera and Microsoft Edge, it does not great visual while you are playing a game. I would not recommend using those.
 
-* I am finding the Safari and Firefox, it does very clear visual while the playing. I would recommand to use Safari or Firefox.
+* I am finding Safari and Firefox, it does very clear visuals while playing. I would recommend using Safari or Firefox.
 
 ### The devices
 
-* I was testing on my iphone and seem it does not working at all but my mention Rory does working on his mobile device.
+* I was testing on my iPhone and seem it does not work at all but my mentioned Rory does work on his mobile device.
 
 ### The test running game in Heroku app
 
-* Almost the function works except the check_draw does not working because I want to see prompt "it's tie on the screen when it was tie. 
+* Almost the function works except the check_draw does not work because I want to see the prompt "it's tie on the screen when it was tie. 
 
-* It was working before when I asked tutor because I found it have some glitch and I want to solution check_draw. we tried to figure it out what was problem. Unforunately, my time allowance was hit up. I ran to fix sereval times and could not find solution. My deadline was so closed then I stop to fix and move on to do ReadMe. 
+* It was working before when I asked the tutor because I found it have some glitches and I want to solve check_draw. we tried to figure out what was the problem. Unfortunately, my time allowance was hit up. I ran to fix it several times and could not find a solution. My deadline was so closed then I stop to fix it and move on to do ReadMe. 
 
 ## Validation testing
 
+* [The CI Python Linter](https://pep8ci.herokuapp.com/#) had been running testing and there are lots of errors and fixing the bugs. Now there are no errors.
 
+<details>
+<summary><strong style="font-size:18px">See images sections click here</strong></summary>
 
+## lot of the errors
+<br>
+  <img src="assets/images/Show_Errors_CI_Python_liner.png" alt="Screenshot show the website called 'CI Python linter, display a lot of errors">
+<br>
+
+## Last Error
+<br>
+  <img src="assets/images/Last_Error_CI_Python_liner.png" alt="Screenshot show the website called 'CI Python linter, less the errors">
+<br>
+
+## No Error
+<br>
+
+  <img src="assets/images/No_Error_CI_liner.png" alt="Screenshot show the website called 'CI Python linter, all clear the errors">
+<br>
+
+</details> 
 
 # Deployment
 
-The GitHub page where is deployed. How do processing the site deployed as follows:
+[The Heroku app page](https://www.heroku.com/) where is deployed. How do processing the site deployed as follows:
 
-* Use files on the GitHub page and choose one of the files where it is in the “portfolio-project-1-robert-quinlan” file
-* Click on setting 
-* On the left side follow the list of options
-* To click on ‘page’
-* The source under the option to “Deploy from a Branch”
-* The Branch under to open to main and root then click to save. 
-* It ran the deployment processing while it is successful.
+* Login 
+* use the Google Authenticator app and open the screen display of the code number 
+and Verify Your Identity page "Verification Code" and insert the code in the box 
+then click on Verify button. 
+* Click on the button "Create new app" 
+* Type in the box "project-3-robert-quinlan"
+* Select Europe
+* Click on the "Create app" button
+* To click "project-3-robert-quinlan" to open
+* Click on "Deploy" on the top menu
+* On RQISL next to the box copy from GitHub <https://github.com/RQISL/portfolio-project-3-robert-quinlan> to paste onto the box then click on to "search" button 
+* prompt shows the link active then click on the "connect" button
+* Make sure to check the "Enable Automatic" button is on
+* click on the "Deploy Branch" button
+* Prompts active on the screen until the completed
+* Click on the "View" button to open the page
+* I would <strong>recommend</strong> to use Safari or Firefox browser compatibility
 
-The site lives at [Movie Quiz](https://rqisl.github.io/portfolio-project-2-robert-quinlan/)
+### The deployed site is now live [Tic Tac Toe](https://project-3-robert-quinlan.herokuapp.com/)
 
 ## Credits
 
-I was nervous to do projects because I had experienced how difficult through javascript where I studied for Multimedia BA degree. I started project 2, I found it was extremely difficult all over again. My concept was before start developing the site and turn out I was not able to full completed which are get result, age group and time up game. I had spend to learning other resource a lot of time. I tried to understand the javascript but I was disppointed because I could not understand what they have explaining. Cause it was not my first English language. 
+I learned very new to me use Python. I enjoyed creating the Tic Tac Toe in Python.
 
-My mentor had good feedback and helps with my process improvement on site project. 
+The Tutors team was great support and encourage me to deploy learning to use Python.
+
+My mentor had good feedback and helps with my process improvement on the site project. 
 
 ## Resouce & tutorial
-* ### I learned as many resources as possible I could learn.
+* ### I learned as many resources as possible I could learn how use create the Tic Tac Toe game in Python.
 
-1) [Ridpidapi video for API to get images of the poster](https://www.youtube.com/watch?v=ytNyibPQFhw) 
-1) [Pick one of the images how to use](https://makersaid.com/array-of-images-in-javascript/)
-1) [Hidden Click](https://www.w3schools.com/css/tryit.asp?filename=trycss_display) 
-1) How can I structure the quiz concept?
-    - [Example quiz 1](https://simplestepscode.com/javascript-quiz-tutorial/)
-    - [Example quiz 2](https://www.youtube.com/watch?v=f4fB9Xg2JEY) 
-1) [Output result](https://codepen.io/yaphi1/pen/NpZvJp)
-1) [How can  I do the question to the next slide](https://www.youtube.com/watch?v=uAAD3mmQGRQ)
-1) [Array through to Code Institute resource](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+2021_T1/courseware/0a4bf408d10c4149bb686457ac11edf6/9ad9ed6044aa49c0ae12507f3c03aa79/)
-1) [Entry username on the screen through Code Institute](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+2021_T1/courseware/0a4bf408d10c4149bb686457ac11edf6/16d62f1111064f5cb6a64582da96a41b/?child=last.)
-    - [Example 1](https://youtu.be/Iw6fyph6MNw)
-    - [Example 2](https://youtu.be/KB6Yg5hNrqc)
-    - [Example 3](https://www.youtube.com/watch?v=aEj0Wu33hJM) 
-1) Click highlight
-    - [Example 1](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+2021_T1/courseware/0a4bf408d10c4149bb686457ac11edf6/fe180c06af614d2f86e32957ae17a859/?child=last) 
-    - [Example 2](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+2021_T1/courseware/0a4bf408d10c4149bb686457ac11edf6/fe180c06af614d2f86e32957ae17a859/?child=last)
-    - [Example 3](https://stackoverflow.com/questions/39852228/style-backgroundcolor-doesnt-work)
-1) Click highlight remove and active 
-    - [Example 1](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+2021_T1/courseware/0a4bf408d10c4149bb686457ac11edf6/37e3becd93804fdf8bf586523f56ead5/5?activate_block_id=block-v1%3ACodeInstitute%2BLMR101%2B2021_T1%2Btype%40html%2Bblock%404b2504c0ab4e40d6b42d4b527776707a)
-    - [Example 2](https://softauthor.com/make-selected-clicked-button-active-in-javascript/)
-1) [Output HTML in javascript](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LMR101+2021_T1/courseware/0a4bf408d10c4149bb686457ac11edf6/37e3becd93804fdf8bf586523f56ead5/) 
-1) [Overlay 3 W School](https://www.w3schools.com/howto/howto_css_overlay.asp)
-1) For loop
-    - [Example 1](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onclick)
-    - [Example 2](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_foreach)
-    - [Example 3](https://www.freecodecamp.org/news/javascript-foreach-js-array-for-each-example/amp/)
-    - [Example 3](https://www.freecodecamp.org/news/javascript-foreach-js-array-for-each-example/amp/)
+### Example Flowchat to help me design the flowchart as see [Flowchart](#flowchart) above
 
-## Adobe Photoshop & Illustrate
+1) <https://www.programiz.com/article/flowchart-programming>
+2) <https://problemsolvingwithpython.com/08-If-Else-Try-Except/08.06-Flowcharts/>
 
-* The logo images where I created the Photoshop. I downloaded the image comes from [www.vecteezy.com](https://www.vecteezy.com/vector-art/19115573-creative-business-card-and-logo-template-album-film-movie-reel-vector-illustration). It is free licence. I choose a roll movie image and edited to create a logo where I used Adobe Illustrate. 
-* The layout movie poster on the front page which comes from [www.wallpaperflare.com/](www.wallpaperflare.com/), It is free to allow download who wish to use wallpaper on the usernames' desktop, laptop, tablet or mobile.
-* I downloaded three movie posters:
-    - [Matrix](https://www.wallpaperflare.com/the-matrix-poster-movies-neo-keanu-reeves-morpheus-carrie-anne-moss-wallpaper-mjcss/download/1920x1200)
-    - [Avengers](https://www.wallpaperflare.com/marvel-avengers-the-avengers-avengers-age-of-ultron-thor-wallpaper-zkw/download/1920x1200)
-    - [Spiderman](https://www.wallpaperflare.com/spider-man-movies-spider-man-3-marvel-comics-black-suited-spiderman-wallpaper-pnkas/download/1920x1200)
-* I made an overlapping layout of the movie posters where I used Adobe PhotoShop 
+### Tic Tac Toe tutorials, help me to concept how I create the coding in Python
+
+1) <https://www.youtube.com/watch?v=dK6gJw4-NCo&t=32s>
+2) <https://www.youtube.com/watch?v=M3G1ZgOMFxo>
+3) <https://medium.com/@estebanthi/tic-tac-toe-game-in-python-for-beginners-6c09bb63eb84>
+4) <https://www.javatpoint.com/tic-tac-toe-in-python>
+5) <https://www.youtube.com/watch?v=BHh654_7Cmw>
+6) <https://www.youtube.com/watch?v=n2o8ckO-lfk>
+
+### Color, I choose these for my project and I want to learn various syntaxes for the color option to use.
+
+1) <https://pypi.org/project/colored/> 
+2) <https://www.geeksforgeeks.org/print-colors-python-terminal/> 
+3) <https://www.studytonight.com/python-howtos/how-to-print-colored-text-in-python#google_vignette>
+4) <https://pypi.org/project/colorama/>
+
+### Error Handles tutorials, helps me to see how can I create the error handle
+1) <https://www.freecodecamp.org/news/how-to-handle-errors-in-python/>
+2) <https://www.geeksforgeeks.org/handling-nameerror-exception-in-python/>
+3) <https://www.w3schools.com/python/python_try_except.asp>  
+
+
+
+## Technologies Used
+
+1) [Code Anywhere](https://app.codeanywhere.com/) - Active development in Python
+2) [The CI Python Linter](https://pep8ci.herokuapp.com/#) - Run testing any errors to fix the bugs
+3) [Heroku app](https://www.heroku.com/) - The deployed to active the browser. My project is completed and now live [Tic Tac Toe](https://project-3-robert-quinlan.herokuapp.com/) 
+
 
 ## Concluded 
 
-* I completed my concept project for the Movie Quiz. I created very basic on javascript. The site lives [Movie Quiz](https://rqisl.github.io/portfolio-project-2-robert-quinlan/).
+* I completed my concept project for the Tic Tac Toe. I created very basic Python. The site lives [Tic Tac Toe](https://project-3-robert-quinlan.herokuapp.com/) 
