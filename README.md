@@ -1,9 +1,4 @@
-
--------------------------------------------------------------------------------------------------------
-### Please note: I am first language is ISL (Irish Sign Language). I write in the second English language. I hope you read and understand the ReadMe.
--------------------------------------------------------------------------------------------------------
-
-## Concept Project
+# Concept Project
 
 * The concept project for the Tic Tac Toe. The design function is very basic in Python.
 
